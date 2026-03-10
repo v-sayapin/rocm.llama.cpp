@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
 
 ARG UBUNTU_VERSION=24.04
-ARG ROCM_VERSION=7.1.1
-ARG LLAMA_CPP_TAG=b7636
+ARG ROCM_VERSION=7.2
+ARG LLAMA_CPP_TAG=b8253
 ARG GPU_TARGETS=gfx1100
 
 ARG USER=llama
@@ -29,7 +29,7 @@ RUN apt-get update \
     ca-certificates \
     cmake \
     curl \
-    libcurl4-openssl-dev \
+    libssl-dev \
     libgomp1 \
     ninja-build \
   && rm -rf /var/lib/apt/lists/*
